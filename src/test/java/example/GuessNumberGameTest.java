@@ -149,6 +149,7 @@ public class GuessNumberGameTest {
 
         //then
         assertEquals(false,checkInputResult);
-
     }
+
+
 }

@@ -34,7 +34,7 @@ public class GuessNumberGame {
     public Boolean checkInput(String guessNumber) {
         Boolean checkResult = null;
         Set<Character> guessNumberSet = new HashSet<>();
-        if(guessNumber.length() == 4){
+        if(guessNumber != null && guessNumber.length() == 4){
             for(int index = 0, len = guessNumber.length(); index < len; index++){
                 guessNumberSet.add(guessNumber.charAt(index));
             }
@@ -48,4 +48,6 @@ public class GuessNumberGame {
         }
         return checkResult;
     }
+
+
 }
