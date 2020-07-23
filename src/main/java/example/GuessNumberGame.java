@@ -48,6 +48,23 @@ public class GuessNumberGame {
 
 
     public String play(List<String> guessList) {
-        return null;
+        int times = 6;
+        StringBuilder gameResult = new StringBuilder();
+        for(int index = 0; index < times; index++){
+            String guessNumber = guessList.get(index);
+            if(checkInput(guessNumber)){
+                String guessResult = guess(guessNumber);
+                if(guessResult.equals("4A0B")){
+                    gameResult.append(guessResult).append("\nCongratulations,you win!\n");
+                    break;
+                }else{
+                    gameResult.append(guessResult).append("\n");
+                }
+            }else{
+                gameResult.append("Wrong Input，Input again\n");
+            }
+
+        }
+        return gameResult.toString();
     }
 }
