@@ -27,4 +27,8 @@ public class GuessNumberGame {
 
         return result.toString();
     }
+
+    public Boolean checkInput() {
+        return null;
+    }
 }
