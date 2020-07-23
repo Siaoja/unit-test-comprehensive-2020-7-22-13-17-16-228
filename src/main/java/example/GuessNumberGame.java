@@ -18,7 +18,7 @@ public class GuessNumberGame {
 
                 if (index == answer.indexOf(guessNumberList[index])) {
                     aCount++;
-                } else {
+                } else if (answer.indexOf(guessNumberList[index]) != -1) {
                     bCount++;
                 }
             }
