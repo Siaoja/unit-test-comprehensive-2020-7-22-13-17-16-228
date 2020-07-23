@@ -120,13 +120,28 @@ public class GuessNumberGameTest {
 
     }
 
-
     @Test
     void should_given_1124_when_call_check_input_then_return_false() {
         //given
         Generator mockedAnswerGenerator = Mockito.mock(Generator.class);
         given(mockedAnswerGenerator.generate()).willReturn(answer);
         String guessNumber = "1124";
+
+        //when
+        GuessNumberGame guessNumberGame = new GuessNumberGame(mockedAnswerGenerator);
+        Boolean checkInputResult = guessNumberGame.checkInput(guessNumber);
+
+        //then
+        assertEquals(false,checkInputResult);
+
+    }
+
+    @Test
+    void should_given_12_when_call_check_input_then_return_false() {
+        //given
+        Generator mockedAnswerGenerator = Mockito.mock(Generator.class);
+        given(mockedAnswerGenerator.generate()).willReturn(answer);
+        String guessNumber = "12";
 
         //when
         GuessNumberGame guessNumberGame = new GuessNumberGame(mockedAnswerGenerator);
