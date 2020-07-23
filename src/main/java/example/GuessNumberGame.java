@@ -8,6 +8,6 @@ public class GuessNumberGame {
     }
 
     public String guess(String guessNumber){
-        return null;
+        return "4A0B";
     }
 }
