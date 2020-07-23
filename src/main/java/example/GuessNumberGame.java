@@ -29,6 +29,6 @@ public class GuessNumberGame {
     }
 
     public Boolean checkInput() {
-        return null;
+        return true;
     }
 }
