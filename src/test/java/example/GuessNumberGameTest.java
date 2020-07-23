@@ -119,4 +119,21 @@ public class GuessNumberGameTest {
         assertEquals(true,checkInputResult);
 
     }
+
+
+    @Test
+    void should_given_1124_when_call_check_input_then_return_false() {
+        //given
+        Generator mockedAnswerGenerator = Mockito.mock(Generator.class);
+        given(mockedAnswerGenerator.generate()).willReturn(answer);
+        String guessNumber = "1124";
+
+        //when
+        GuessNumberGame guessNumberGame = new GuessNumberGame(mockedAnswerGenerator);
+        Boolean checkInputResult = guessNumberGame.checkInput();
+
+        //then
+        assertEquals(false,checkInputResult);
+
+    }
 }
