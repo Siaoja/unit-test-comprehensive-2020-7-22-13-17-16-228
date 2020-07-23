@@ -29,7 +29,7 @@ public class GuessNumberGameTest {
         //given
         Generator mockedAnswerGenerator = Mockito.mock(Generator.class);
         given(mockedAnswerGenerator.generate()).willReturn("1234");
-        String guessNumber = "1243";
+        String guessNumber = "2134";
 
         //when
         GuessNumberGame guessNumberGame = new GuessNumberGame(mockedAnswerGenerator);

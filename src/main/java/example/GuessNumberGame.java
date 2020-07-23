@@ -8,6 +8,22 @@ public class GuessNumberGame {
     }
 
     public String guess(String guessNumber){
-        return "4A0B";
+        StringBuilder result = new StringBuilder();
+        char[] guessNumberList = guessNumber.toCharArray();
+        if(answer.equals(guessNumber)){
+            result.append("4A0B");
+        }else{
+            int aCount = 0, bCount = 0;
+            for(int index = 0, len = guessNumberList.length; index < len; index++){
+                if(index == answer.indexOf(guessNumberList[index])){
+                    aCount++;
+                }else{
+                    bCount++;
+                }
+            }
+            result.append(aCount).append("A").append(bCount).append("B");
+        }
+
+        return result.toString();
     }
 }
