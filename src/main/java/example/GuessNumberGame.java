@@ -34,11 +34,15 @@ public class GuessNumberGame {
     public Boolean checkInput(String guessNumber) {
         Boolean checkResult = null;
         Set<Character> guessNumberSet = new HashSet<>();
-        for(int index = 0, len = guessNumber.length(); index < len; index++){
-            guessNumberSet.add(guessNumber.charAt(index));
-        }
-        if(guessNumberSet.size() == guessNumber.length()){
-            checkResult = true;
+        if(guessNumber.length() == 4){
+            for(int index = 0, len = guessNumber.length(); index < len; index++){
+                guessNumberSet.add(guessNumber.charAt(index));
+            }
+            if(guessNumberSet.size() == guessNumber.length()){
+                checkResult = true;
+            }else{
+                checkResult = false;
+            }
         }else{
             checkResult = false;
         }
