@@ -1,5 +1,8 @@
 package example;
 
+import java.util.HashSet;
+import java.util.Set;
+
 public class GuessNumberGame {
     private String answer;
 
@@ -28,7 +31,17 @@ public class GuessNumberGame {
         return result.toString();
     }
 
-    public Boolean checkInput() {
-        return true;
+    public Boolean checkInput(String guessNumber) {
+        Boolean checkResult = null;
+        Set<Character> guessNumberSet = new HashSet<>();
+        for(int index = 0, len = guessNumber.length(); index < len; index++){
+            guessNumberSet.add(guessNumber.charAt(index));
+        }
+        if(guessNumberSet.size() == guessNumber.length()){
+            checkResult = true;
+        }else{
+            checkResult = false;
+        }
+        return checkResult;
     }
 }

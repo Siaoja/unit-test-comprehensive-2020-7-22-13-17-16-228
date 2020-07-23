@@ -113,7 +113,7 @@ public class GuessNumberGameTest {
 
         //when
         GuessNumberGame guessNumberGame = new GuessNumberGame(mockedAnswerGenerator);
-        Boolean checkInputResult = guessNumberGame.checkInput();
+        Boolean checkInputResult = guessNumberGame.checkInput(guessNumber);
 
         //then
         assertEquals(true,checkInputResult);
@@ -130,7 +130,7 @@ public class GuessNumberGameTest {
 
         //when
         GuessNumberGame guessNumberGame = new GuessNumberGame(mockedAnswerGenerator);
-        Boolean checkInputResult = guessNumberGame.checkInput();
+        Boolean checkInputResult = guessNumberGame.checkInput(guessNumber);
 
         //then
         assertEquals(false,checkInputResult);
