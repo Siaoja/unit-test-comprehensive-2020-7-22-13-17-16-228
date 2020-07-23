@@ -7,17 +7,18 @@ public class GuessNumberGame {
         answer = generator.generate();
     }
 
-    public String guess(String guessNumber){
+    public String guess(String guessNumber) {
         StringBuilder result = new StringBuilder();
         char[] guessNumberList = guessNumber.toCharArray();
-        if(answer.equals(guessNumber)){
+        if (answer.equals(guessNumber)) {
             result.append("4A0B");
-        }else{
+        } else {
             int aCount = 0, bCount = 0;
-            for(int index = 0, len = guessNumberList.length; index < len; index++){
-                if(index == answer.indexOf(guessNumberList[index])){
+            for (int index = 0, len = guessNumberList.length; index < len; index++) {
+
+                if (index == answer.indexOf(guessNumberList[index])) {
                     aCount++;
-                }else{
+                } else {
                     bCount++;
                 }
             }
