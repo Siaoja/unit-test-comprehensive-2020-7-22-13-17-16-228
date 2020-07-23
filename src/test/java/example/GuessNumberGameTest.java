@@ -73,7 +73,7 @@ public class GuessNumberGameTest {
     }
 
     @Test
-    void should_given_when_then_return() {
+    void should_given_2105_when_call_guess_then_return_0A2B() {
         //given
         Generator mockedAnswerGenerator = Mockito.mock(Generator.class);
         given(mockedAnswerGenerator.generate()).willReturn(answer);
@@ -85,6 +85,22 @@ public class GuessNumberGameTest {
 
         //then
         assertEquals("0A2B",guessResult);
+
+    }
+
+    @Test
+    void should_given_5678_when_call_guess_then_return_0A0B() {
+        //given
+        Generator mockedAnswerGenerator = Mockito.mock(Generator.class);
+        given(mockedAnswerGenerator.generate()).willReturn(answer);
+        String guessNumber = "5678";
+
+        //when
+        GuessNumberGame guessNumberGame = new GuessNumberGame(mockedAnswerGenerator);
+        String guessResult = guessNumberGame.guess(guessNumber);
+
+        //then
+        assertEquals("0A0B",guessResult);
 
     }
 }
